@@ -25,7 +25,10 @@
   white-space: normal;
   height: 100%;
 }
-
+.row:has(> .row) {
+  font-size: 1rem;
+  white-space: normal;
+}
 
 input[type="text"] {
   background-color: var(--clr_white);
@@ -214,21 +217,33 @@ body {
   color: var(--clr_white)
 }
 .container-comments > .top {
-  height: 20%;
+  height: 15%;
 }
 .container-comments > .bottom {
-  height: 80%;
+  height: 85%;
 }
+
+.block-comments {
+  /* border: 1px solid #000; */
+  height: 100%;
+  overflow-y: auto;
+  text-align: center;
+  /* overflow: hidden;
+  text-overflow:ellipsis; */
+
+}
+
 .container-comments .box-comment {
   width: 400px;
-  height: 200px !important;
+  height: 150px !important;
   border: 3px solid var(--clr_slave);
   background-color: var(--clr_dark);
-  margin: 5px;
+  margin: 10px;
   padding: 5px;
+  text-align: left;
 }
 .container-comments .box-comment > .left {
-  width: 150px;
+  width: 25%;
 }
 .container-comments .box-comment > .left > .top {
   height: 20%;
@@ -237,7 +252,7 @@ body {
   height: 80%;
 }
 .container-comments .box-comment > .right {
-  width: calc(100% - 150px);
+  width: 75%;
 }
 .container-comments .box-comment span {
   line-height: 25px;
